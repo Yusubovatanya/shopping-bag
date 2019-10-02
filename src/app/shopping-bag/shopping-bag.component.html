@@ -1,0 +1,42 @@
+<div class="wrapper">
+  <div *ngIf="isOrder; else emptyBag">
+    <p class="title">Shopping bag</p>
+    <mat-toolbar class="bag_header" fxLayout="row">
+      <p class="order_img" fxFlex="45">Product</p>
+      <p class="order_title" fxFlex="20">Qty</p>
+      <p class="order_weight" fxFlex="15">Price</p>
+      <p class="order_price" fxFlex="15">Subtotal</p>
+      <p class="order_price" fxFlex="5">Delete</p>
+    </mat-toolbar>
+
+    <div class="order_container" *ngFor="let order of orders">
+      <div>
+        <app-order-item [order]="order" (changeQty)="changeProductQty($event)" (delete)="deleteOrder($event)">
+        </app-order-item>
+      </div>
+    </div>
+    <mat-card>
+      <div fxLayoutAlign="end start" class="result">
+        <div fxFlex="65"></div>
+        <div fxFlex="15">
+          <p>Total weight:</p>
+          <p>Order cost:</p>
+        </div>
+        <div fxFlex="15" class="total_order">
+          <p>{{totalWeight}} kg</p>
+          <p>{{totalPrice | async }} $</p>
+        </div>
+        <div fxFlex="5"></div>
+      </div>
+      <div fxLayoutAlign="end start">
+        <button mat-raised-button color="accent" fxFlex="35">Pay order</button>
+        <div fxFlex="5"></div>
+      </div>
+    </mat-card>
+  </div>
+  <ng-template #emptyBag>
+    <div class="empty_bag">Your shopping cart is empty!</div>
+    <button [routerLink]="['/main']" mat-raised-button color="accent" class="empty_button">Back to shopping</button>
+  </ng-template>
+  <div class="line"></div>
+</div>

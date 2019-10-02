@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <section>
+    <h3 class="title"> MOST POPULAR PRODUCTS</h3>
+    <div fxLayout="row wrap" fxLayoutAlign="space-between start" class="product_cards">
+      <div *ngFor="let product of products" class="product_item">
+        <app-product-item [product]="product" (addProduct)="addToBag($event)"></app-product-item>
+      </div>
+    </div>
+  </section>
+  <div class="line"></div>
+</div>

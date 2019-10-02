@@ -1,0 +1,109 @@
+.card {
+  width: 225px;
+  background-color: #fafbfb;
+  box-sizing: border-box;
+  color: #374247;
+  font-family: 'Bookman Old Style', serif;
+  transform: scale(1);
+}
+
+.card p {
+  margin: 0;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card_info p,
+.price,
+.card_description {
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.weight {
+  font-size: 14px;
+}
+
+.card_title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.card_img {
+  background: rgba(55, 66, 71, 0.5);
+  height: 150px;
+}
+
+.card_description p,
+.weight p {
+  opacity: 0.8;
+}
+
+.card_description p {
+  padding: 0;
+}
+
+.card_description {
+  font-size: 1em;
+  line-height: 1.4em;
+  height: 2.8em;
+  overflow: hidden;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.card_description p {
+  font-size: 14px;
+}
+
+.card_description p:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 6em;
+  height: 1.6em;
+  background: linear-gradient(to left top, #fff, rgba(255, 255, 255, 0));
+}
+
+
+.favourite_icon,
+.shop-icon {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+}
+
+.favourite_icon {
+  background: url(../../../assets/img/icons8-heart-outline-filled-90.png) no-repeat center/contain;
+}
+
+.shop-icon {
+  background: url(../../../assets/img/icons8-shopping-bag-100.png) no-repeat center/contain;
+}
+
+
+.card_action button {
+  background: #daddde;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+}
+
+.card_action button:first-child {
+  margin-right: 10px;
+}
+
+.card_action button:hover {
+  background: #ffd740;
+}

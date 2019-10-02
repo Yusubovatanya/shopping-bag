@@ -1,0 +1,37 @@
+<mat-card fxLayout="row" fxLayoutAlign="space-around center" class="order_card">
+  <div fxFlex="45" fxFlexAlign="start">
+    <div fxLayout="row">
+      <div fxFlex="45" class="order_img" [ngStyle]="{
+          'background': 'rgba(55, 66, 71, 0.5)',
+          'width': '225px',
+          'height': '150px'}">
+      </div>
+      <div fxFlex="65" class="order_info">
+        <p class="order_title">{{order.title}} </p>
+        <p>Weight: {{order.weight}} kg</p>
+        <p>Description: {{order.description | slice: 0:50}}...</p>
+      </div>
+    </div>
+  </div>
+  <div fxFlex="20">
+    <div fxLayout="row">
+      <mat-form-field class="order_qty">
+        <mat-label>Qty</mat-label>
+        <mat-select (selectionChange)="changeValueQty()" [(ngModel)]="selectedValue">
+          <mat-option value="1">1</mat-option>
+          <mat-option value="2">2</mat-option>
+          <mat-option value="3">3</mat-option>
+          <mat-option value="4">4</mat-option>
+          <mat-option value="5">5</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <p class="order_price" fxFlex="15">{{order.price}} $</p>
+  <p fxFlex="15">{{subtotalPrice()}} $</p>
+  <div fxFlex="5">
+    <button mat-icon-button class="delete_button" fxLayout="row" fxLayoutAlign="center center" (click)="deleteProduct()">
+      <mat-icon>clear</mat-icon>
+    </button>
+  </div>
+</mat-card>

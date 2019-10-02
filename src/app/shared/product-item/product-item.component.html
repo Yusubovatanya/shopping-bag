@@ -1,0 +1,23 @@
+<mat-card class="card">
+  <a href="">
+    <div mat-card-image class="card_img"></div>
+  </a>
+  <div class="card_product">
+    <div class="card_info" fxLayout="row" fxLayoutAlign="space-between end">
+      <p class="card_title">{{product.title}}</p>
+      <p class="weight">{{product.weight}}kg</p>
+    </div>
+    <p class="price">{{product.price}}$</p>
+    <div class="card_description">
+      <p>{{product.description}}</p>
+    </div>
+  </div>
+  <div class="card_action" fxLayout="row" fxLayoutAlign="end">
+    <button fxLayout="row wrap" fxLayoutAlign="center">
+      <p class="favourite_icon"></p>
+    </button>
+    <button fxLayout="row wrap" fxLayoutAlign="center" (click)="addToBag()">
+      <p class="shop-icon"></p>
+    </button>
+  </div>
+</mat-card>

@@ -1,0 +1,131 @@
+ul li {
+  list-style: none;
+}
+
+ul {
+  margin: 0;
+}
+
+.line {
+  height: 1px;
+  background-color: rgba(0, 0, 0, .26);
+  margin: 15px 0 30px;
+}
+
+.icon-search {
+  opacity: 0.3;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+}
+
+.wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.logo,
+.user,
+.form_search {
+  flex: 1 1 0;
+}
+
+:host ::ng-deep .mat-form-field-infix {
+  width: 250px;
+}
+
+.form_label {
+  font-style: italic;
+}
+
+.logo {
+  width: 300px;
+  height: 50px;
+}
+
+.logo p {
+  font-size: 36px;
+  color: #673ab7;
+  margin: 0;
+  text-align: center;
+}
+
+.user_info {
+  max-width: 120px;
+  margin-left: auto;
+}
+
+.user_info p {
+  margin: 0;
+}
+
+.user_icon {
+  font-size: 24px;
+}
+
+.shop_button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.shop_icon {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+}
+
+.count {
+  background-color: #ffd740;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  position: absolute;
+  top: 26%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+}
+
+.count span {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+
+.total_prise {
+  font-weight: 400;
+}
+
+.menu {
+  margin: -30px auto 0;
+  max-width: 70%;
+  position: relative;
+  top: -2px;
+}
+
+.menu a {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: rgb(22, 21, 21);
+}
+
+.menu li {
+  padding-top: 16px;
+  border-top: 3px solid rgba(255, 215, 64, 0);
+}
+
+.menu li:hover,
+.menu li:focus,
+.menu li:active {
+  border-top: 3px solid rgba(255, 215, 64, 1);
+}
+
+.menu li:hover a,
+.menu li:focus a,
+.menu li:active a {
+  color: #673ab7;
+}

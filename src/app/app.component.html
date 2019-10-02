@@ -1,0 +1,42 @@
+<div class="wrapper">
+  <header class="header">
+    <div fxLayout="row" fxLayoutAlign="space-around center">
+      <form class="form_search">
+        <mat-form-field appearance="standard">
+          <mat-label class="form_label">Search...</mat-label>
+          <input matInput placeholder="Search">
+          <mat-icon matSuffix class="icon-search">search</mat-icon>
+        </mat-form-field>
+      </form>
+      <div class="logo">
+        <p>Shopping time!</p>
+      </div>
+      <div class="user">
+        <div class="user_info" fxLayout="row" fxLayoutAlign="space-around end">
+          <mat-icon class="user_icon">person </mat-icon>
+          <div class="shop_button">
+            <button mat-icon-button class="shop_icon" [routerLink]="['/shopping-bag']">
+              <i class="material-icons">shopping_basket</i>
+            </button>
+            <p class="count" fxLayout="row" fxLayoutAlign="center center"><span>{{count | async }}</span></p>
+          </div>
+          <div class="total_prise">
+            {{totalPrice | async}}$
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="line"></div>
+    <nav class="menu">
+      <ul fxLayout="row" fxLayoutAlign="space-around center">
+        <li><a [routerLink]="['/main']">HOME</a></li>
+        <li> <a href="">SHOP</a></li>
+        <li> <a href="">HELP</a></li>
+        <li> <a href="">NEW</a></li>
+        <li><a href="">CONTACT US</a></li>
+      </ul>
+    </nav>
+    <div class="line"></div>
+  </header>
+  <router-outlet></router-outlet>
+</div>
